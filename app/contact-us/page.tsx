@@ -1,0 +1,5 @@
+import { Clock3, MapPin, Phone } from "lucide-react";
+import { DIRECTIONS, PHONE } from "../site-data";
+import { SiteFooter, SiteHeader } from "../site-shell";
+export default function ContactUs() { return <main><SiteHeader active="contact"/><section className="contact-page"><div className="contact-heading"><p>CONTACT US</p><h1>Come sit<br/>at our table.</h1><p>For reservations, private dining, daily specials, or anything else, give us a call.</p></div><div className="contact-details"><div><Phone/><span><b>Phone</b><a href={PHONE}>(347) 365-7552</a></span></div><div><Clock3/><span><b>Hours</b>Mon–Fri: 7am–9pm<br/>Sat–Sun: 9am–9pm</span></div><div><MapPin/><span><b>Address</b>1212 Avenue Z<br/>Brooklyn, NY 11235<br/><a href={DIRECTIONS} target="_blank" rel="noreferrer">Get directions</a></span></div></div></section><section className="map-section"><iframe title="Map showing Dmitriev's Bistro" src="https://www.google.com/maps?q=1212+Avenue+Z,+Brooklyn,+NY+11235&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/></section><SiteFooter/></main>; }
+
