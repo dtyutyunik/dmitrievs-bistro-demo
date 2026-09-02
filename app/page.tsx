@@ -1,13 +1,12 @@
 import { Phone, ShoppingBag } from "lucide-react";
-import { DOORDASH, HERO, PHONE } from "./site-data";
+import { BASE_PATH, DOORDASH, HERO, PHONE } from "./site-data";
 import { SiteFooter, SiteHeader } from "./site-shell";
 const storefront = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=434,fit=crop/t27M2NJYTqkEpfqz/db-2-M35C0bnaPeflECCD.jpg";
 const dining = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=458,fit=crop/t27M2NJYTqkEpfqz/db-c-zw4SxuWJoqkDIHWw.jpg";
 const specials = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,fit=crop/t27M2NJYTqkEpfqz/tx7qzv-hwIkyEpyT2ZnNpj1.png";
 export default function Home() { return <main><SiteHeader active="home"/>
-  <section className="official-hero" style={{backgroundImage:`linear-gradient(90deg,rgba(26,12,7,.28),rgba(26,12,7,.04)),url('${HERO}')`}}><div><p>WELCOME to Dmitriev&apos;s Bistro, where traditional family recipes meet warm hospitality</p><h1>Dmitriev&apos;s<br/>Bistro</h1><div className="hero-actions"><a href="/our-menu">Our Menu</a><a href={DOORDASH} target="_blank" rel="noreferrer"><ShoppingBag size={18}/> Order on DoorDash</a><a href={PHONE}><Phone size={18}/> Call</a></div></div></section>
+  <section className="official-hero" style={{backgroundImage:`linear-gradient(90deg,rgba(26,12,7,.28),rgba(26,12,7,.04)),url('${HERO}')`}}><div><p>WELCOME to Dmitriev&apos;s Bistro, where traditional family recipes meet warm hospitality</p><h1>Dmitriev&apos;s<br/>Bistro</h1><div className="hero-actions"><a href={`${BASE_PATH}/our-menu/`}>Our Menu</a><a href={DOORDASH} target="_blank" rel="noreferrer"><ShoppingBag size={18}/> Order on DoorDash</a><a href={PHONE}><Phone size={18}/> Call</a></div></div></section>
   <section className="welcome-copy"><p>We proudly serve authentic homemade dishes prepared with fresh high quality ingredients &amp; time-honored cooking</p><h2>Always Fresh.<br/><em>Always Delicious.</em></h2></section>
   <section className="photo-pair"><img src={storefront} alt="Dmitriev's Bistro storefront"/><img src={dining} alt="Dining room at Dmitriev's Bistro"/></section>
-  <section className="specials"><div><span>HOUSE SPECIALS</span><h2>Made with care,<br/>served with love</h2><p>Breakfast, a complete weekday lunch, and traditional favorites made fresh every day.</p><a href="/our-menu">View Our Menu</a></div><img src={specials} alt="Dmitriev's Bistro food specialties"/></section>
-  <section className="visit-home"><p>VISIT US</p><h2>Good food.<br/>Warm table.<br/>Brooklyn home.</h2><a href="/contact-us">Hours &amp; Location</a></section><SiteFooter/></main>; }
-
+  <section className="specials"><div><span>HOUSE SPECIALS</span><h2>Made with care,<br/>served with love</h2><p>Breakfast, a complete weekday lunch, and traditional favorites made fresh every day.</p><a href={`${BASE_PATH}/our-menu/`}>View Our Menu</a></div><img src={specials} alt="Dmitriev's Bistro food specialties"/></section>
+  <section className="visit-home"><p>VISIT US</p><h2>Good food.<br/>Warm table.<br/>Brooklyn home.</h2><a href={`${BASE_PATH}/contact-us/`}>Hours &amp; Location</a></section><SiteFooter/></main>; }

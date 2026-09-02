@@ -1,4 +1,5 @@
 import { Clock3, MapPin, Menu as MenuIcon, Phone, ShoppingBag, Star } from "lucide-react";
+import { BASE_PATH } from "../site-data";
 
 const doordash = "https://www.doordash.com/en/store/dmitrievs-bistro-brooklyn-35715419/";
 const directions = "https://www.google.com/maps/dir/?api=1&destination=1212+Avenue+Z+Brooklyn+NY+11235";
@@ -66,7 +67,7 @@ const menuLabels: Record<string, string> = { breakfast: "Breakfast", lunch: "Lun
 const menuLinks = groups.map(({id}) => ({id, label: menuLabels[id]}));
 
 export default function Home() {
-  return <main><div className="design-switch" aria-label="Choose site design"><a className="active" href="/concept">1</a><a href="/">2</a></div>
+  return <main><div className="design-switch" aria-label="Choose site design"><a className="active" href={`${BASE_PATH}/concept/`}>1</a><a href={`${BASE_PATH}/`}>2</a></div>
     <div className="announcement"><span>Traditional family recipes · warm hospitality</span><span className="announcement-details">Mon–Fri 7am–9pm · Sat–Sun 9am–9pm</span></div>
     <header className="site-header">
       <a className="logo brand-logo" href="#home" aria-label="Dmitriev's Bistro home"><img src={logo} alt="Dmitriev's Bistro"/></a>
@@ -83,9 +84,9 @@ export default function Home() {
     <section className="signature-dishes" aria-labelledby="signature-heading">
       <div className="signature-copy"><p className="script-label">Always fresh. Always delicious.</p><h2 id="signature-heading">Homemade favorites</h2><p>From crispy Chicken Tabaka to hand-folded vareniki and the complete weekday lunch, these are the dishes neighbors come back for.</p><a className="underlined" href="#menu">Explore the full menu →</a></div>
       <div className="hero-collage" aria-label="Dmitriev's Bistro Chicken Tabaka, vareniki, and business lunch">
-        <div className="hero-dish hero-main"><span className="steam steam-one"/><span className="steam steam-two"/><span className="steam steam-three"/></div>
-        <div className="hero-dish hero-side-one"><span className="dish-label">Hand-folded vareniki</span></div>
-        <div className="hero-dish hero-side-two"><span className="lunch-promo"><em>Weekday favorite</em><strong>Lunch Special · $15.99</strong><small>Soup · salad · main</small></span></div>
+        <div className="hero-dish hero-main" style={{backgroundImage:`url('${BASE_PATH}/chicken-tabaka-real.jpg')`}}><span className="steam steam-one"/><span className="steam steam-two"/><span className="steam steam-three"/></div>
+        <div className="hero-dish hero-side-one" style={{backgroundImage:`url('${BASE_PATH}/vareniki-real.jpg')`}}><span className="dish-label">Hand-folded vareniki</span></div>
+        <div className="hero-dish hero-side-two" style={{backgroundImage:`url('${BASE_PATH}/business-lunch-real.jpg')`}}><span className="lunch-promo"><em>Weekday favorite</em><strong>Lunch Special · $15.99</strong><small>Soup · salad · main</small></span></div>
         <div className="handmade-stamp"><Star size={16} fill="currentColor"/><strong>Made Fresh</strong><span>Every Day</span></div>
       </div>
     </section>
@@ -101,7 +102,7 @@ export default function Home() {
       <p className="price-note">Prices are subject to change. Please confirm current pricing when ordering.</p>
     </section>
 
-    <section id="story" className="story-section"><div className="storefront-wrap"><img src="/storefront.jpeg" alt="The welcoming storefront of Dmitriev's Bistro on Avenue Z"/><span>1212 Avenue Z</span></div><div className="story-copy"><p className="script-label">Where every guest feels like family</p><h2>Authentic food.<br/>Warm hospitality.</h2><p>Dmitriev&apos;s Bistro brings traditional family recipes to Sheepshead Bay, from borshch and hand-folded vareniki to Chicken Tabaka and a complete weekday lunch.</p><div className="quote">“Always fresh. Always delicious.”</div><div className="story-actions"><a className="outline-button" href={directions} target="_blank" rel="noreferrer"><MapPin size={19}/> Get directions</a><a className="outline-button call-outline" href="tel:+13473657552"><Phone size={19}/> Call us</a></div></div></section>
+    <section id="story" className="story-section"><div className="storefront-wrap"><img src={`${BASE_PATH}/storefront.jpeg`} alt="The welcoming storefront of Dmitriev's Bistro on Avenue Z"/><span>1212 Avenue Z</span></div><div className="story-copy"><p className="script-label">Where every guest feels like family</p><h2>Authentic food.<br/>Warm hospitality.</h2><p>Dmitriev&apos;s Bistro brings traditional family recipes to Sheepshead Bay, from borshch and hand-folded vareniki to Chicken Tabaka and a complete weekday lunch.</p><div className="quote">“Always fresh. Always delicious.”</div><div className="story-actions"><a className="outline-button" href={directions} target="_blank" rel="noreferrer"><MapPin size={19}/> Get directions</a><a className="outline-button call-outline" href="tel:+13473657552"><Phone size={19}/> Call us</a></div></div></section>
 
     <section className="order-callout"><p className="script-label">Dinner is ready</p><h2>Homemade comfort,<br/>delivered to your door.</h2><a className="order-button light" href={doordash} target="_blank" rel="noreferrer">Order on DoorDash <span>→</span></a></section>
 
@@ -118,4 +119,5 @@ export default function Home() {
     <div className="mobile-actions"><a href="tel:+13473657552"><Phone size={18}/> Call</a><a href={doordash} target="_blank" rel="noreferrer"><ShoppingBag size={18}/> Order online</a></div>
   </main>;
 }
+
 

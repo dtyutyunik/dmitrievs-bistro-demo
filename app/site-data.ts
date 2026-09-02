@@ -4,6 +4,7 @@ export const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=12
 export const INSTAGRAM = "https://www.instagram.com/dmitrievsbistro?igsh=MWNlOHVxOWY5bnN3Ng==";
 export const LOGO = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/t27M2NJYTqkEpfqz/logo-gCdWqsP9TKNpNRzL.jpg";
 export const HERO = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,fit=crop/t27M2NJYTqkEpfqz/d-bistro-vt9F5yUa6TkwM5pI.jpg";
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const asset = (name: string) => `https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/t27M2NJYTqkEpfqz/${name}`;
 export type Dish = { name: string; price: string; description?: string; image?: string };
@@ -68,4 +69,3 @@ export const menuSections: MenuSection[] = [
     { name: "Lemonade / Лимонад", price: "$3.00", image: asset("lemon-8B5TBfMXvaHScqNF.png") },
   ]},
 ];
-
