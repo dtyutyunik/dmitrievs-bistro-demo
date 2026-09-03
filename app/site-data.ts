@@ -1,7 +1,10 @@
 export const DOORDASH = "https://www.doordash.com/en/store/dmitrievs-bistro-brooklyn-35715419/";
+export const GRUBHUB = "https://www.grubhub.com/restaurant/dmitrievs-bistro-1212-avenue-z-brooklyn/13460872";
+export const SEAMLESS = "https://www.seamless.com/menu/dmitrievs-bistro-1212-avenue-z-brooklyn/13460872";
 export const PHONE = "tel:+13473657552";
 export const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=1212+Avenue+Z+Brooklyn+NY+11235";
 export const INSTAGRAM = "https://www.instagram.com/dmitrievsbistro?igsh=MWNlOHVxOWY5bnN3Ng==";
+export const FACEBOOK = "https://www.facebook.com/dmitrievsbistro/";
 export const LOGO = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/t27M2NJYTqkEpfqz/logo-gCdWqsP9TKNpNRzL.jpg";
 export const HERO = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,fit=crop/t27M2NJYTqkEpfqz/d-bistro-vt9F5yUa6TkwM5pI.jpg";
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -26,9 +29,9 @@ export const menuSections: MenuSection[] = [
     { name: "Chicken in Sauce / Курица в соусе", price: "$6.00", image: asset("kur-souce-osbvf1QIMps6AHoO.png") },
     { name: "Jarovnya / Жаровня", price: "$19.99", description: "Beef, chicken or fish / говядина, курица или рыба", image: asset("xer-9SFZf4oacbHdhRSH.png") },
     { name: "Beefsteak / Бифштекс", price: "$6.00", image: asset("bftsx-vwEH3qUveXDyiHwN.png") },
-    { name: "Chicken Chops / Куриные отбивные", price: "$19.99" },
-    { name: "Vareniki / Вареники", price: "$15.99", description: "Cherry, cottage cheese or potato / вишня, творог или картофель" },
-    { name: "Cutlets / Котлеты", price: "$6.00" },
+    { name: "Chicken Chops / Куриные отбивные", price: "$19.99", image: asset("tabaka-ONTtEjwdz504oPBT.png") },
+    { name: "Vareniki / Вареники", price: "$15.99", description: "Cherry, cottage cheese or potato / вишня, творог или картофель", image: `${BASE_PATH}/vareniki-real.jpg` },
+    { name: "Cutlets / Котлеты", price: "$6.00", image: `${BASE_PATH}/business-lunch-real.jpg` },
   ]},
   { id: "pizza", title: "PIZZA / ПИЦЦА", dishes: [
     { name: "Cheese Pizza", price: "$12.99", image: asset("ppptz-chz-QYyyJetibAmOVhDg.png") },
@@ -45,9 +48,9 @@ export const menuSections: MenuSection[] = [
     { name: "Rice / Рис", price: "$6.00", image: asset("ris-qzQhk42JNDdvQ0xi.png") },
     { name: "French Fries / Картофель фри", price: "$6.00", image: asset("fri-8pqdnBToOX8ZnrZe.png") },
     { name: "Mashed Potatoes / Картофельное пюре", price: "$6.00", image: asset("mashed-p-b6Uuj4qKO3QK1smb.png") },
-    { name: "Homemade Fried Potatoes", price: "$9.99" },
+    { name: "Homemade Fried Potatoes", price: "$9.99", image: asset("papa-musr-zamguMyTPNyq1PAL.png") },
     { name: "Fried Potatoes with Mushrooms", price: "$11.99", image: asset("papa-musr-zamguMyTPNyq1PAL.png") },
-    { name: "Buckwheat / Гречка", price: "$6.00" },
+    { name: "Buckwheat / Гречка", price: "$6.00", image: asset("bftsx-vwEH3qUveXDyiHwN.png") },
   ]},
   { id: "salads", title: "SALADS / САЛАТЫ", dishes: [
     { name: "Greek Salad / Греческий салат", price: "$6.99 / $12.99", image: asset("greek-salad-UMq3YbM85W8O6Gko.png") },
