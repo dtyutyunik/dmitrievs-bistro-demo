@@ -50,7 +50,7 @@ export const menuSections: MenuSection[] = [
     { name: "Mashed Potatoes / Картофельное пюре", price: "$6.00", image: asset("mashed-p-b6Uuj4qKO3QK1smb.png") },
     { name: "Homemade Fried Potatoes", price: "$9.99", image: `${BASE_PATH}/homemade-fried-potatoes.webp` },
     { name: "Fried Potatoes with Mushrooms", price: "$11.99", image: asset("papa-musr-zamguMyTPNyq1PAL.png") },
-    { name: "Buckwheat / Гречка", price: "$6.00", image: asset("bftsx-vwEH3qUveXDyiHwN.png") },
+    { name: "Buckwheat / Гречка", price: "$6.00", image: `${BASE_PATH}/buckwheat.webp` },
   ]},
   { id: "salads", title: "SALADS / САЛАТЫ", dishes: [
     { name: "Greek Salad / Греческий салат", price: "$6.99 / $12.99", image: asset("greek-salad-UMq3YbM85W8O6Gko.png") },
